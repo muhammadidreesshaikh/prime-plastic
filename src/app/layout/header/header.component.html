@@ -7,21 +7,34 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-2">
                 <div class="logo">
-                    <a class="text-default" routerLink="/homepage">Prime Plastic</a>
+                    <a class="text-default" routerLink="/homepage">Prime Plastic.</a>
                 </div>
             </div>
 
-            <div class="col-9">
+            <div class="col-10">
                 <div class="nav">
                     <ul>
-                        <li><a class="text-uppercase" routerLink="/homepage">Home</a></li>
-                        <li><a class="text-uppercase" routerLink="/about">About</a></li>
-                        <li><a class="text-uppercase" routerLink="/services">Services</a></li>
-                        <li><a class="text-uppercase" routerLink="/projects">Projects</a></li>
-                        <li><a class="text-uppercase" routerLink="/clients">Clients</a></li>
-                        <li><a class="text-uppercase" routerLink="/contact">Contact</a></li>
+                        <li><a class="text-uppercase" routerLink="/home">Home</a></li>
+
+                        <div class="dropdown">
+                            <button class="dropbtn text-uppercase">Why Altium</button>
+                            <div class="dropdown-content">
+                                <a routerLink="/">Overview</a>
+                                <a routerLink="/">Customer Centric Approach</a>
+                                <a routerLink="/">The Team</a>
+                            </div>
+                        </div>
+
+                        <li><a class="text-uppercase" routerLink="/">Markets We Serve</a></li>
+                        <li><a class="text-uppercase" routerLink="/">Product Catalog</a></li>
+                        <li><a class="text-uppercase" routerLink="/">Clients</a></li>
+                        <li><a class="text-uppercase mr-2" routerLink="/">Contact Us</a></li>
+
+                        <div class="c-btn">
+                            <a class="press blue">Call Now</a>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -31,12 +44,13 @@
 
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
     <ul>
-        <li><a (click)="toggleMenu()" routerLink="/homepage">Homepage</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/about">About</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/services">Services</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/projects">Projects</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/home">Home</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/about">Why Altium</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/services">Markets We Serve</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/projects">Product Catalog</a></li>
         <li><a (click)="toggleMenu()" routerLink="/clients">Clients</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/contact">Contact</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/contact">Contact Us</a></li>
+
 
         <div class="bottom-thing">
             <a href="tel:+923310337182"><i class="fas fa-question-circle"></i> Need Help ?</a>
