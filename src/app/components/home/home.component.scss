@@ -1,0 +1,75 @@
+@import "../../../styles.scss";
+
+.market {
+    padding: 40px 0;
+
+    .heading {
+        h4 {
+            @include respond(mobile) {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            @include respond(mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .inner {
+        padding-top: 30px;
+
+        .plain-card {
+            margin-top: 25px;
+            cursor: pointer;
+
+            &:hover {
+                background: $default;
+
+                .icon {
+                    img {
+                        color: $white;
+                    }
+                }
+
+                .name {
+                    h6 {
+                        color: $white;
+                    }
+
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+
+            .icon {
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border: 1px solid #e7e7e7;
+                    padding: 3px;
+                    border-radius: 50px;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            .name {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 11px;
+
+                h6 {
+                    font-size: 15px;
+                    color: $black;
+                }
+
+                a {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
