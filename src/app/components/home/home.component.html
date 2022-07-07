@@ -7,7 +7,8 @@
                 <div class="col-12 col-md-10 col-lg-8">
                     <div class="heading">
                         <h4>Your Market. Our Solutions.</h4>
-                        <p>We are committed to bringing our customers big design ideas and manufacturing excellence rooted in creative innovation and branding know-how.</p>
+                        <p>We are committed to bringing our customers big design ideas and manufacturing excellence
+                            rooted in creative innovation and branding know-how.</p>
                     </div>
                 </div>
 
@@ -22,7 +23,7 @@
                                                 <img src="{{item.image}}">
                                             </div>
                                         </div>
-    
+
                                         <div class="col-10">
                                             <div class="name">
                                                 <h6>{{item.name}}</h6>
@@ -35,6 +36,86 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="thinking">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9">
+                    <div class="heading">
+                        <h4>Forward Thinking</h4>
+                        <p>We design packaging solutions for beverage and consumer industrial products. It’s our job to
+                            help your brand stand out and your business grow—and we take that responsibility seriously.
+                            The success of your products and the future of your organization drive us to excel in our
+                            effort to be among the leading plastic containers packaging suppliers in the world. Strong
+                            partnerships with those we serve are what matters most to the Prime Plastic Packaging team.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="inner">
+                        <div class="row">
+                            <div *ngFor="let item of forwardThinking"
+                                [ngClass]="item.type == 'partner' ? 'col-12' : 'col-12 col-md-6 col-lg-6'">
+                                <div class="plain-card">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div class="icon">
+                                                <img src="{{item.image}}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-10">
+                                            <div class="name">
+                                                <h5>{{item.name}}</h5>
+                                                <p>{{item.text}}</p>
+
+                                                <div class="btn-learn">
+                                                    <a href="#">Learn More <i class="fa-solid fa-arrow-right-long pl-2"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="contact-inner">
+
+                        <div class="left">
+                            <img src="../../../assets/img/logo.PNG">
+                        </div>
+
+                        <div class="center">
+                            <h4>Packaging Solutions Always Made Right®</h4>
+                            <p>With a diverse stock bottle portfolio and an innovative design team working to produce creative packaging solutions, we can help you find the perfect solution.</p>
+                        </div>
+
+                        <div class="right">
+                            <div class="btn-contact">
+                                <a href="#">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

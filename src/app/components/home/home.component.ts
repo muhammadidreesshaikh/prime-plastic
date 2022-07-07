@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   chip: any = [];
+  forwardThinking: any = [];
 
   constructor() { }
 
@@ -62,6 +63,30 @@ export class HomeComponent implements OnInit {
         id: 10,
         image: '../../../assets/img/icon10.png',
         name: 'Healthcare',
+      }
+    ]
+
+    this.forwardThinking =[
+      {
+        id: 1,
+        image: '../../../assets/img/icon11.png',
+        name: 'Why Us',
+        text: 'The leading customer-centric packaging solutions provider that helps elevate your brand.',
+        type: 'prime',
+      },
+      {
+        id: 2,
+        image: '../../../assets/img/icon12.png',
+        name: 'Sustainability',
+        text: 'Our sustainable solutions and practices drive value to our customers and protect the environment',
+        type: 'sustainability',
+      },
+      {
+        id: 3,
+        image: '../../../assets/img/icon13.png',
+        name: 'What You Get When You Partner With Us',
+        text: 'From the talented designers of Studio PKG™, to our experienced manufacturing teams across the network, to our focus on environmental stewardship, Altium delivers. We pride ourselves on the partnerships we’ve forged over the past two decades and will continue to deliver for you: High performance packaging solutions. A cost-effective approach to meeting your needs. And the commitment to sustainability practices that add even more value to you and your customers.',
+        type: 'partner',
       }
     ]
   }
