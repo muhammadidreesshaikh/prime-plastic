@@ -10,6 +10,9 @@
                 object-fit: cover;
                 object-position: center;
                 filter: brightness(40%);
+                @include respond(mobile) {
+                    height: 35vh;
+                }
             }
             .custom-carousel-caption {
                 position: absolute;
@@ -20,6 +23,9 @@
                     font-size: 37px;
                     font-weight: 600;
                     color: white;
+                    @include respond(mobile) {
+                        font-size: 25px;
+                    }
                 }
                 p{
                     font-size: 20px;
