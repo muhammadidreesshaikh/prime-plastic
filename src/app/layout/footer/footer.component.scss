@@ -1,8 +1,13 @@
 @import '/src/styles.scss';
 
 .footer {
-    padding: 30px 0;
-    background-color: #f9f9f9;
+    // padding: 30px 0;
+    // background-color: #f9f9f9;
+
+    .fill {
+        background-color: #f3f4f5;
+        padding: 30px 0;
+    }
 
     @include respond(mobile) {
         padding-top: 10px;
@@ -55,7 +60,7 @@
     .footer-bottom-section {
         p {
             padding-top: 30px;
-            font-size: 15px;
+            font-size: 14px;
             color: $lightBlack;
             @include respond(mobile) {
                 text-align: center;
