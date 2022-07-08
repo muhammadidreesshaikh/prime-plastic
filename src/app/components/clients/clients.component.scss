@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+.client {
+    padding: 40px 0;
+
+    .client-inner {
+        margin-top: 40px;
+
+        .plain-card {
+            text-align: center;
+            margin-top: 25px;
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+}

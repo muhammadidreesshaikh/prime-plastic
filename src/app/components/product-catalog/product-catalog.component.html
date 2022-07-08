@@ -1,36 +1,38 @@
-<section>
-    <div class="product">
-        <div class="container">
-            <div class="row justify-content-center">
+<div class="product">
+    <div class="container">
+        <div class="row justify-content-center">
 
-                <div class="col-12 col-md-10 col-lg-10">
-                    <div class="heading">
-                        <h4>Product Catalog</h4>
-                        <p>Get to market faster with affordable, sustainable stock containers from Graham. Whether you're a startup looking for a quick solution or an established brand who'd like to test a new product, our stock bottle solutions bring you superior quality backed by an award-winning team. Explore our product catalog to find stock plastic packaging options that will help you grow your business.</p>
-                    </div>
+            <div class="col-12 col-md-10 col-lg-10">
+                <div class="heading">
+                    <h4>Product Catalog</h4>
+                    <p>Get to market faster with affordable, sustainable stock containers from Graham. Whether you're a
+                        startup looking for a quick solution or an established brand who'd like to test a new product,
+                        our stock bottle solutions bring you superior quality backed by an award-winning team. Explore
+                        our product catalog to find stock plastic packaging options that will help you grow your
+                        business.</p>
                 </div>
+            </div>
 
-                <div class="col-12">
-                    <div class="catalog">
-                        <div class="row">
+            <div class="col-12">
+                <div class="catalog">
+                    <div class="row">
 
-                            <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of catalog">
-                                <div class="plain-card">
-                                    <img src="{{item.image}}">
-                                    <h5>{{item.name}}</h5>
-                                    <p>Catalog : {{item.catalogId}}</p>
+                        <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of catalog">
+                            <div class="plain-card">
+                                <img src="{{item.image}}">
+                                <h5>{{item.name}}</h5>
+                                <p>Catalog : {{item.catalogId}}</p>
 
-                                    <div class="catalog-btn">
-                                        <a class="bordered-btn">View Product </a>
-                                    </div>
+                                <div class="catalog-btn">
+                                    <a class="bordered-btn">View Product </a>
                                 </div>
                             </div>
+                        </div>
 
-                        </div>    
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
-</section>
+</div>
