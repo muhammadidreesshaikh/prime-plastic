@@ -19,18 +19,18 @@
                         <li><a class="text-uppercase" routerLink="/home">Home</a></li>
 
                         <li class="dropdown">
-                            <button class="dropbtn text-uppercase">Why Us</button>
+                            <button class="dropbtn text-uppercase" routerLink="/why-us">Why Us</button>
                             <div class="dropdown-content">
-                                <a routerLink="/">Overview</a>
-                                <a routerLink="/">Customer Centric Approach</a>
-                                <a routerLink="/">The Team</a>
+                                <a routerLink="/why-us/overview">Overview</a>
+                                <a routerLink="/why-us/customer-centric-approach">Customer Centric Approach</a>
+                                <a routerLink="/why-us/the-team">The Team</a>
                             </div>
                         </li>
 
-                        <li><a class="text-uppercase" routerLink="/">Markets We Serve</a></li>
+                        <li><a class="text-uppercase" routerLink="/markets-serve">Markets We Serve</a></li>
                         <li><a class="text-uppercase" routerLink="/product-catalog">Product Catalog</a></li>
-                        <li><a class="text-uppercase" routerLink="/">Clients</a></li>
-                        <li><a class="text-uppercase mr-2" routerLink="/">Contact Us</a></li>
+                        <li><a class="text-uppercase" routerLink="/clients">Clients</a></li>
+                        <li><a class="text-uppercase mr-2" routerLink="/contact-us">Contact Us</a></li>
 
                         <div class="py-3">
                             <a href="tel:+923082108124" class="c-btn green">Call Now </a>
@@ -45,11 +45,11 @@
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
     <ul>
         <li><a (click)="toggleMenu()" routerLink="/home">Home</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/about">Why Us</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/services">Markets We Serve</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/why-us">Why Us</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/markets-serve">Markets We Serve</a></li>
         <li><a (click)="toggleMenu()" routerLink="/product-catalog">Product Catalog</a></li>
         <li><a (click)="toggleMenu()" routerLink="/clients">Clients</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/contact">Contact Us</a></li>
+        <li><a (click)="toggleMenu()" routerLink="/contact-us">Contact Us</a></li>
 
 
         <div class="bottom-thing">
