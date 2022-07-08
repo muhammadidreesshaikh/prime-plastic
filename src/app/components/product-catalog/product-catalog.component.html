@@ -10,6 +10,26 @@
                     </div>
                 </div>
 
+                <div class="col-12">
+                    <div class="catalog">
+                        <div class="row">
+
+                            <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of catalog">
+                                <div class="plain-card">
+                                    <img src="{{item.image}}">
+                                    <h5>{{item.name}}</h5>
+                                    <p>Catalog : {{item.catalogId}}</p>
+
+                                    <div class="catalog-btn">
+                                        <a class="bordered-btn">View Product </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>    
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
