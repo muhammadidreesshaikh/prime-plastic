@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { MarketsServeRoutingModule } from './markets-serve-routing.module';
 import { MarketsServeComponent } from './markets-serve.component';
+import { MarketTypeComponent } from './market-type/market-type.component';
 
 
 @NgModule({
   declarations: [
-    MarketsServeComponent
+    MarketsServeComponent,
+    MarketTypeComponent
   ],
   imports: [
     CommonModule,
