@@ -1,13 +1,14 @@
+import { firebaseKeys } from '../../keys';
+
 export const environment = {
   production: true,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>',
-    appId: '<your-app-id>',
-    measurementId: '<your-measurement-id>'
+    apiKey: firebaseKeys.apiKey,
+    authDomain: firebaseKeys.authDomain,
+    projectId: firebaseKeys.projectId,
+    storageBucket: firebaseKeys.storageBucket,
+    messagingSenderId: firebaseKeys.messagingSenderId,
+    appId: firebaseKeys.appId,
+    measurementId: firebaseKeys.measurementId,
   }
 };
