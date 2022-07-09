@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prime-plastics": {
+      "hosting": {
+        "prime-plastic": [
+          "prime-plastics"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prime-plastics"
+  }
+}

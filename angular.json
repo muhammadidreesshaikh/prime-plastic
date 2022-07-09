@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "prime-plastic:build:production",
+            "firebaseProject": "prime-plastics",
+            "firebaseHostingSite": "prime-plastics"
+          }
         }
       }
     }
