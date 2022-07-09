@@ -80,20 +80,24 @@
                 max-height: 250px;
                 overflow-y: auto;
                 z-index: 1;
+                &.mega-menu{
+                    min-width: 30rem;
+                }
             }
 
             .dropdown-content a {
                 color: $gray;
-                font-size: 13px;
+                font-size: 12px;
                 font-weight: 500;
                 padding: 12px 13px;
                 text-decoration: none;
                 display: block;
                 img{
-                    width: 35px;
-                    height: 35px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $white;
                     border: 1px solid #e7e7e7;
-                    padding: 3px;
+                    padding: 2px;
                     border-radius: 50px;
                     object-fit: contain;
                     object-position: center;
