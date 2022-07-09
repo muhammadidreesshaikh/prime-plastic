@@ -215,3 +215,19 @@ button {
     padding-top: 10px;
   }
 }
+
+// srollbar 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $default;
+  -webkit-border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+  border-left: 1px #888;
+  -webkit-border-radius: 10px;
+}
