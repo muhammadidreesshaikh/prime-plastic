@@ -1,0 +1,27 @@
+<div class="container py-5">
+    <form [formGroup]="programForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Product Image URL" formControlName="image">
+                    <label for="search">Image URL</label>
+                  </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Product Name" formControlName="name">
+                    <label for="search">Product Name</label>
+                  </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Catalog" formControlName="catalog">
+                    <label for="search">Catalog</label>
+                  </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12 text-center pt-5">
+                <button type="submit" id="submit" class="btn btn-primary btn-lg px-5" [disabled]="programForm.invalid">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
