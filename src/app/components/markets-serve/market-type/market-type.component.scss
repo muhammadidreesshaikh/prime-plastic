@@ -12,9 +12,13 @@
         background-color: #585858;
         background-attachment: fixed;
     }
+    .curve {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
     .fill{
         .dairy-inner{
-            margin-top: 4.375rem;
             .top{
                 display: flex;
                 img{
