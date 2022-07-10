@@ -15,18 +15,18 @@
                 <div class="col-12">
                     <div class="inner">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of chip">
-                                <div class="plain-card">
+                            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of chips">
+                                <div class="plain-card" (click)="onDetailPage(item)">
                                     <div class="row">
                                         <div class="col-2">
                                             <div class="icon">
-                                                <img src="{{item.image}}">
+                                                <img src="{{item.iconImg}}">
                                             </div>
                                         </div>
 
                                         <div class="col-10">
                                             <div class="name">
-                                                <h6>{{item.name}}</h6>
+                                                <h6>{{item.category}}</h6>
                                                 <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
                                             </div>
                                         </div>

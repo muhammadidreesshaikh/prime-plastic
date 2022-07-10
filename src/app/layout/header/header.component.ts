@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
   constructor(
     private service: MarketsWeServeService,
     private storage: LocalStorageService,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -61,7 +60,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onDetailPage(item: any) {
-    this.router.navigate(['/markets-serve/market-type'], { state: item });
+    this.service.onDetailPage(item);
   }
 
 }

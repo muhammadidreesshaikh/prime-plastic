@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarketsWeServeService } from 'src/app/core/http/markets-we-serve/markets-we-serve.service';
 
 @Component({
   selector: 'app-home',
@@ -7,64 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  chip: any = [];
+  chips: any = [];
   forwardThinking: any = [];
 
-  constructor() { }
+  constructor(
+    private marketsWeServeService: MarketsWeServeService
+  ) { }
 
   ngOnInit(): void {
-    this.chip =[
-      {
-        id: 1,
-        image: '../../../assets/img/icon2.png',
-        name: 'Water',
-      },
-      {
-        id: 2,
-        image: '../../../assets/img/icon3.png',
-        name: 'Beverage',
-      },
-      {
-        id: 3,
-        image: '../../../assets/img/icon1.png',
-        name: 'Dairy',
-      },
-      {
-        id: 4,
-        image: '../../../assets/img/icon4.png',
-        name: 'Food',
-      },
-      {
-        id: 5,
-        image: '../../../assets/img/icon5.png',
-        name: 'Nutrition',
-      },
-      {
-        id: 6,
-        image: '../../../assets/img/icon6.png',
-        name: 'Household Chemicals',
-      },
-      {
-        id: 7,
-        image: '../../../assets/img/icon7.png',
-        name: 'Specialty Chemicals',
-      },
-      {
-        id: 8,
-        image: '../../../assets/img/icon8.png',
-        name: 'Automotive',
-      },
-      {
-        id: 9,
-        image: '../../../assets/img/icon9.png',
-        name: 'Personal Care',
-      },
-      {
-        id: 10,
-        image: '../../../assets/img/icon10.png',
-        name: 'Healthcare',
-      }
-    ]
+    this.getCategoriesSynced();
 
     this.forwardThinking =[
       {
@@ -89,6 +41,20 @@ export class HomeComponent implements OnInit {
         type: 'partner',
       }
     ]
+  }
+
+  getCategoriesSynced() {
+    this.marketsWeServeService.getCategories().subscribe(res => {
+      this.chips = res;
+    });
+
+    this.marketsWeServeService.getCategoriesFromSession().subscribe(res => {
+      this.chips = res;
+    });
+  }
+
+  onDetailPage(item: any) {
+    this.marketsWeServeService.onDetailPage(item);
   }
 
 }
