@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 
@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 export class CatalogComponent implements OnInit {
 
   collection: string = "product-catalog";
-  programForm: any = FormGroup;
+  programForm: any = UntypedFormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private firestore: AngularFirestore,
     private router: Router
   ) { }
