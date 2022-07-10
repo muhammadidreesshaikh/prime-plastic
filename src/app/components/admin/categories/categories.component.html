@@ -1,0 +1,64 @@
+<div class="container py-5">
+    <h3 class="pb-5">Market We Serve | Category & Page</h3>
+    <form [formGroup]="programForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Product Image URL" formControlName="iconImg">
+                    <label for="search">Icon Image URL</label>
+                  </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Category Name" formControlName="category">
+                    <label for="search">Category Name</label>
+                  </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Page Title" formControlName="title">
+                    <label for="search">Page Title</label>
+                  </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <textarea rows="10" class="form-control" placeholder="Description" formControlName="description"></textarea>
+                    <label for="search">Description</label>
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Slider Image" formControlName="sliderImg">
+                    <label for="search">Slider Image</label>
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Content Image 1" formControlName="contentImg1">
+                    <label for="search">Content Image 1</label>
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <textarea rows="10" class="form-control" placeholder="Half Typo Left" formControlName="halfTypoLeft"></textarea>
+                    <label for="search">Half Typo Left</label>
+                  </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <textarea rows="10" class="form-control" placeholder="Half Typo Right" formControlName="halfTypoRight"></textarea>
+                    <label for="search">Half Typo Right</label>
+                  </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" placeholder="Descriptive Image" formControlName="descriptiveImg">
+                    <label for="search">Descriptive Image</label>
+                  </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-12 text-center pt-5">
+                <button type="submit" id="submit" class="btn btn-primary btn-lg px-5" [disabled]="programForm.invalid">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
