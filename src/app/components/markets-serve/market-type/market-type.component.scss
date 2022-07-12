@@ -11,19 +11,22 @@
         background-blend-mode: soft-light;
         background-color: #585858;
         background-attachment: fixed;
+        @include respond(tablet) {
+            height: 50vh;
+            background-position: top;
+        }
         @include respond(mobile) {
             height: 30vh;
             background-position: revert;
-        }
-        @include respond(tablet) {
-            height: 40vh;
-            background-position: top;
         }
     }
     .curve {
         position: absolute;
         width: 100%;
         bottom: 0;
+        @include respond(tablet) {
+            bottom: -1px;
+        }
     }
     .fill{
         .dairy-inner{
@@ -49,11 +52,11 @@
                 h4{
                     font-size: 35px;
                     color: $orange;
-                    @include respond(mobile) {
-                        font-size: 25px;
-                    }
                     @include respond(tablet) {
                         font-size: 30px;
+                    }
+                    @include respond(mobile) {
+                        font-size: 20px;
                     }
                 }
             }
@@ -74,8 +77,6 @@
                     object-position: center;
                     border-radius: 5px;
                     box-shadow: 2px 3px 15px #747474;
-                    position: relative;
-                    filter: brightness(70%);
                 }
             }
             .texts{
@@ -84,7 +85,8 @@
                     p{
                         color: $gray;
                         font-size: 16px;
-                        @include respond(tablwt) {
+                        white-space: break-spaces;
+                        @include respond(tablet) {
                             font-size: 15px;
                         }
                     }
@@ -100,11 +102,11 @@
                         color: $white;
                         font-weight: 500;
                         font-size: 20px;
-                        @include respond(mobile) {
-                            font-size: 18px;
-                        }
                         @include respond(tablet) {
                             font-size: 16px;
+                        }
+                        @include respond(mobile) {
+                            font-size: 18px;
                         }
                     }
                     .btn-text{
@@ -125,12 +127,9 @@
                     border-radius: 5px;
                     object-fit: cover;
                     object-position: center;
-                    box-shadow: 2px 3px 15px #747474;
-                    @include respond(mobile) {
-                        width: 100%;
-                    }
+                    box-shadow: 2px 3px 10px #a9a9a9;
                     @include respond(tablet) {
-                        width: 80%;
+                        width: 100%;
                     }
                 }
             }

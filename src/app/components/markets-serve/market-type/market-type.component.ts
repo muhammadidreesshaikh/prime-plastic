@@ -17,7 +17,9 @@ export class MarketTypeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.data);
-    
+    if (!this.data) {
+      this.router.navigateByUrl('/home');
+    }
   }
 
 }
