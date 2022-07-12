@@ -48,9 +48,6 @@ export class HeaderComponent implements OnInit {
           const middleIndex = Math.ceil(this.categories.length / 2);
           this.leftItems = this.categories.splice(0, middleIndex);   
           this.rightItems = this.categories.splice(-middleIndex);
-
-          console.log(this.leftItems);
-          console.log(this.rightItems);
         } 
         else {
           this.leftItems = this.categories;

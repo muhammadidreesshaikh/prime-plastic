@@ -30,11 +30,11 @@
                         <!-- dropdown-icons btn -->
                         <li class="dropdown">
                             <button class="dropbtn text-uppercase" routerLink="/markets-serve">Markets We Serve</button>
-                            <div class="dropdown-content mega-menu" [ngStyle]="{'min-width: 35rem': rightItems?.length > 0}">
+                            <div class="dropdown-content mega-menu" [ngClass]="rightItems?.length > 0 ? 'large' : 'small'">
                                 <div class="d-flex justify-content-between">
 
-                                    <div class="left w-100" *ngIf="leftItems?.length > 0" 
-                                        [ngClass]="{'border-end w-50': rightItems?.length > 0}">
+                                    <div class="left" *ngIf="leftItems?.length > 0" 
+                                        [ngClass]="rightItems?.length > 0 ? 'border-end w-50' : 'w-100'">
                                         <a routerLink="markets-serve/market-type" *ngFor="let item of leftItems" (click)="onDetailPage(item)">
                                             <img class="me-2" src="{{item.iconImg}}">
                                             <span>{{item.category}}</span>
