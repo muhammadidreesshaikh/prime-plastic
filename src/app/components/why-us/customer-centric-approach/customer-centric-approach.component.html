@@ -1,1 +1,39 @@
-<p>customer-centric-approach works!</p>
+<div class="customer">
+    <div class="banner" style="background-image: url(../../../../assets/img/why-us/customer-centric-approach1.jpg)"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-10 col-lg-9">
+                <div class="heading py-5">
+                    <h4>Customer Centric Approach</h4>
+                    <p>Prime Plastics Packaging is the leading customer-centric packaging solution provider that helps you build your business and elevate your brand.</p>
+                    <p>Our partners are forward-thinking business leaders focused on creating value for their customers, company, and consumers. The goal of every partnership is to deliver value and business success. That’s why we collaborate closely with our customers and bring our unmatched packaging expertise and an innovative approach to every challenge.</p>
+                    <p>Discover more about what makes Prime Plastics Packaging your ideal partner.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of approaches">
+                <div class="main-card">
+                    <div class="slide slide1">
+                        <div class="content">
+                            <div class="name">
+                                <h3>{{item.title}}</h3>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="slide slide2" >
+                        <div class="content" >
+                            <h3>{{item.title}}</h3>
+                            <p *ngFor="let point of item.points">{{point}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>

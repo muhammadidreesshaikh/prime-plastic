@@ -1,0 +1,135 @@
+@import "../../../../styles.scss";
+
+.customer {
+    padding: 0 0 40px 0;
+
+    .banner {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-blend-mode: soft-light;
+        background-color: #323232;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(tablet) {
+            margin-bottom: 25px;
+            height: 40vh;
+        }
+    }
+
+    .heading {
+        padding: 40px 0 30px 0;
+
+        h4 {
+            @include respond(tablet) {
+                font-size: 27px;
+            }
+        }
+    }
+
+    .main-card {
+        .name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: #2c73df;
+            border-radius: 7px;
+
+            h3 {
+                @include all-center(50%, 50%);
+                font-size: 18px;
+                font-weight: 600;
+                color: $white;
+            }
+        }
+
+        .slide {
+            width: 300px;
+            height: 200px;
+            transition: 0.5s;
+
+            &.slide1 {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                transition: .7s;
+                transform: translateY(100px);
+
+                @include respond(mobile) {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            &.slide2 {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                transition: .8s;
+                transform: translateY(-100px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+                border-radius: 7px;
+
+                @include respond(mobile) {
+                    display: block;
+                    margin: auto;
+                }
+
+                .content {
+                    height: 200px;
+                    min-height: 200px;
+                    overflow-y: auto;
+                    padding: 20px;
+
+                    h3 {
+                        margin: 0px 0 10px 0;
+                        padding: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        // text-align: center;
+                        color: $black;
+
+                        @include respond(tablet) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        padding-top: 8px;
+                        font-size: 13px;
+                        // text-align: center;
+                        color: $gray;
+
+                        @include respond(tablet) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .slide {
+                &.slide1 {
+                    transform: translateY(0px);
+                }
+
+                &.slide2 {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}

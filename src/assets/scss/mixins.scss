@@ -36,6 +36,13 @@
   object-position: $position;
 }
 
+@mixin all-center($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-$top, -$left);
+}
+
 // responsive mixin
 @mixin respond($breakpoint) {
   @if $breakpoint==desktop {
