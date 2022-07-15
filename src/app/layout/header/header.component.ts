@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
   toggleButton: boolean = false;
   sidebar: boolean = false;
+  sidebarNested: boolean = false;
   fadeSection: boolean = false;
 
   constructor(
@@ -36,6 +37,10 @@ export class HeaderComponent implements OnInit {
 
     // enabling fade section
     this.fadeSection = !this.fadeSection;
+  }
+
+  toggleChild() {
+    this.sidebarNested = !this.sidebarNested;
   }
 
   getCategories() {

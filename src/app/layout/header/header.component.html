@@ -69,8 +69,53 @@
 <div class="sidebar side" [ngClass]="{'show': sidebar}">
     <ul>
         <li><a (click)="toggleMenu()" routerLink="/home">Home</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/why-us">Why Us</a></li>
-        <li><a (click)="toggleMenu()" routerLink="/markets-serve">Markets We Serve</a></li>
+        <li>
+            <a (click)="toggleChild()" routerLink="/why-us">
+                <span>Why Us</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <div class="sidebar side nested" [ngClass]="{'show': sidebarNested}">
+                <ul>
+                    <li>
+                        <button class="btn border text-white" (click)="toggleChild()">
+                            <i class="fa-solid fa-chevron-left pe-2"></i>
+                            <span>Back</span>
+                        </button>
+                    </li>
+                    <li><a (click)="toggleMenu(); toggleChild()" routerLink="/why-us/overview">Overview</a></li>
+                    <li><a (click)="toggleMenu(); toggleChild()" routerLink="/why-us/customer-centric-approach">Customer Centric Approach</a></li>
+                    <li><a (click)="toggleMenu(); toggleChild()" routerLink="/why-us/the-team">The Team</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a (click)="toggleChild()" routerLink="/markets-serve">
+                Markets We Serve
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <div class="sidebar side nested" [ngClass]="{'show': sidebarNested}">
+                <ul>
+                    <li>
+                        <button class="btn border text-white" (click)="toggleChild()">
+                            <i class="fa-solid fa-chevron-left pe-2"></i>
+                            <span>Back</span>
+                        </button>
+                    </li>
+                    <li *ngFor="let item of leftItems" >
+                        <a routerLink="markets-serve/market-type" (click)="toggleMenu(); toggleChild(); onDetailPage(item)">
+                            <img class="me-2" src="{{item.iconImg}}">
+                            <span>{{item.category}}</span>
+                        </a>
+                    </li>
+                    <li *ngFor="let item of rightItems">
+                        <a routerLink="markets-serve/market-type" (click)="toggleMenu(); toggleChild(); onDetailPage(item)">
+                            <img class="me-2" src="{{item.iconImg}}">
+                            <span>{{item.category}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
         <li><a (click)="toggleMenu()" routerLink="/product-catalog">Product Catalog</a></li>
         <li><a (click)="toggleMenu()" routerLink="/clients">Clients</a></li>
         <li><a (click)="toggleMenu()" routerLink="/contact-us">Contact Us</a></li>

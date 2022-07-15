@@ -1,1 +1,38 @@
-<p>the-team works!</p>
+<div class="team">
+    <div class="banner" style="background-image: url(../../../../assets/img/why-us/team1.webp)"></div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-10 col-lg-9">
+                <div class="heading py-5">
+                    <h4>The Team</h4>
+                    <p>Our senior leadership team brings together years of experience, diverse perspectives, and unique business insights. As experts in their respective fields, they share a vision that shapes our future while ensuring we provide valuable packaging solutions to our customers.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4" *ngFor="let item of profile">
+                <div class="main-card">
+                    <img src="{{item.image}}" class="image">
+
+                    <div class="overlay">
+                        <div class="text">
+                            <h4>{{item.name}}</h4>
+                            <p>{{item.text}}</p>
+
+                            <div class="icons">
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://mail.google.com/"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
