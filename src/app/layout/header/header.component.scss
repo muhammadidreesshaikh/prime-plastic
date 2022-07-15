@@ -220,6 +220,16 @@
         &.nested {
             z-index: 17;
         }
+        img{
+            width: 38px;
+            height: 38px;
+            padding: 2px;
+            object-fit: contain;
+            object-position: center;
+            border: 1px solid $white;
+            border-radius: 50px;
+            background-color: $white;
+        }
     }
 
     &.flap {
