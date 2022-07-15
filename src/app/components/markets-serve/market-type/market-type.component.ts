@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MarketsWeServeService } from 'src/app/core/http/markets-we-serve/markets-we-serve.service';
+
 @Component({
   selector: 'app-market-type',
   templateUrl: './market-type.component.html',
@@ -8,18 +10,26 @@ import { Router } from '@angular/router';
 export class MarketTypeComponent implements OnInit {
 
   data: any = {};
-
+  
   constructor(
-    private router: Router
+    private router: Router,
+    private marketSrv: MarketsWeServeService
   ) {
-    this.data = this.router.getCurrentNavigation()?.extras?.state;
+    this.onGetPage();
   }
 
   ngOnInit(): void {
-    console.log(this.data);
-    if (!this.data) {
-      this.router.navigateByUrl('/home');
-    }
+    this.onGetPage();
+  }
+
+  onGetPage() {
+    this.marketSrv.getData().subscribe(res => {
+      this.data = res;
+
+      if (!this.data?.category) {
+        this.router.navigateByUrl('/home');
+      }
+    });
   }
 
 }
