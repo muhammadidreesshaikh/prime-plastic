@@ -10,6 +10,7 @@
                 object-fit: cover;
                 object-position: center;
                 filter: brightness(40%);
+
                 @include respond(tablet) {
                     height: 50vh;
                 }
@@ -18,24 +19,47 @@
                     height: 35vh;
                 }
             }
+
             .custom-carousel-caption {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                h1{
+
+                h1 {
                     font-size: 37px;
                     font-weight: 600;
                     color: white;
+
                     @include respond(mobile) {
                         font-size: 25px;
                     }
                 }
-                p{
+
+                p {
                     font-size: 20px;
                     font-weight: 500;
                     color: white;
                 }
+            }
+        }
+    }
+
+    .customer-service {
+        a {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+
+            img {
+                width: 85px;
+                height: 85px;
+                object-fit: cover;
+                object-position: center;
+                border: 2px solid #d7d7d7;
+                border-radius: 50px;
+                padding: 1px;
             }
         }
     }
