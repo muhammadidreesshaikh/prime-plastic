@@ -59,16 +59,25 @@
             font-size: 16px;
         }
     }
+}
 
-    .footer-bottom-section {
-        p {
-            padding-top: 30px;
+.footer-bottom-section {
+    padding-top: 30px;
+    text-align: center;
+    p {
+        font-size: 14px;
+        color: $lightBlack;
+        @include respond(mobile) {
+            text-align: center;
             font-size: 14px;
-            color: $lightBlack;
-            @include respond(mobile) {
-                text-align: center;
-                font-size: 14px;
-            }
+            display: unset;
+        }
+        
+        a{
+            padding: 0 0 0 10px;
+            font-size: 14px;
+            font-weight: 600;
         }
     }
+    
 }
