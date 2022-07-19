@@ -97,6 +97,7 @@
                 padding: 12px 13px;
                 text-decoration: none;
                 display: block;
+                border-bottom: 1px solid #e5e5e5;
                 img{
                     width: 30px;
                     height: 30px;
@@ -219,6 +220,7 @@
         }
         &.nested {
             z-index: 17;
+            background: linear-gradient(77deg,#090979,#00ffb8);
         }
         img{
             width: 38px;
