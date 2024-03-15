@@ -1,6 +1,7 @@
 @import "../../../styles.scss";
 
 .slider {
+    position: relative;
     .carousel-inner {
         .carousel-item {
             img {
@@ -24,19 +25,35 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 h1{
-                    font-size: 37px;
+                    font-size: 50px;
                     font-weight: 600;
                     color: white;
                     @include respond(mobile) {
-                        font-size: 25px;
+                        font-size: 17px;
                     }
                 }
                 p{
-                    font-size: 20px;
+                    font-size: 17px;
                     font-weight: 500;
                     color: white;
+                    margin-top: 30px;
+                    @include respond(tablet) {
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
                 }
             }
+        }
+    }
+    .socials {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+        z-index: 10;
+        a {
+            color: $white;
+            font-size: 30px;
+            margin-right: 15px;
         }
     }
 }
