@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'ngx-webstorage';
+import { SharedService } from '../../services/shared-service/shared.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,8 @@ export class MarketsWeServeService {
   constructor(
     private firestore: AngularFirestore,
     private localSt: LocalStorageService,
-    private router: Router
+    private router: Router,
+    public sharedSrv: SharedService
   ) { }
 
   getCategories() {
@@ -25,6 +27,7 @@ export class MarketsWeServeService {
   }
 
   onDetailPage(item: any) {
+    this.sharedSrv.setMarketTypeDetails(item);
     this.router.navigate(['/markets-serve/market-type'], { state: item });
   }
 }
